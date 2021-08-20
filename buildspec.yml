@@ -15,6 +15,8 @@ phases:
       - REPOSITORY_URI=421320058418.dkr.ecr.us-east-1.amazonaws.com/tanumoy
       - docker pull 421320058418.dkr.ecr.us-east-1.amazonaws.com/tanumoy:node
       - docker tag 421320058418.dkr.ecr.us-east-1.amazonaws.com/tanumoy:node node:10
+      - docker pull 421320058418.dkr.ecr.us-east-1.amazonaws.com/tanumoy:nginx
+      - docker tag 421320058418.dkr.ecr.us-east-1.amazonaws.com/tanumoy:nginx nginx:alpine
   build:
     commands:         
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
